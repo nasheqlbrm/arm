@@ -25,3 +25,21 @@ So the linear transformation required is Y = 1.5X + 47.5
 *(b) There is another linear transformation that also rescales the scores to have
 mean 100 and standard deviation 15. What is it, and why would you not want to use it for this purpose?*
 
+Nod to http://stats.stackexchange.com/questions/45816/gelman-hill-textbook-question-about-linear-transformation
+
+Note that 225 = a^{2} * 100, actually implies that a can be either +1.5 or -1.5. 
+
+If a = -1.5 then b = 100 + 1.5 * 35 = 152.5. Hence an alternate linear transformation is
+
+Y = -1.5X + 152.5 
+
+Consider the transformed score for of students who scored 25 and 35 on the original test 
+(one standard deviation below and above the mean):
+
+Y(25) = -1.5 * 25 + 152.5 = 115
+
+Y(35) = -1.5 * 35 + 152.5 = 100
+
+As can be seen, an original score of 25 (1 standard deviation below the mean in original), 
+post transformation results in a higher score than an original score of 35 
+(1 standard deviation above the mean in original). This is undesirable behavior.
